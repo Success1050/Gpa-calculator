@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent {
+  padding: 1rem;
+  max-width: max-content;
+  border-radius: 1rem;
+}
+
+.header {
+  max-width: max-content;
+  margin: auto;
+  padding-inline: 3rem;
+  box-shadow: inset 2px 2px 4px 0 rgba(34, 0, 0, 0.8);
+  border-radius: 2px;
+}
+
+.course,
+.grade,
+.unit {
+  flex-basis: 28%;
+  padding: 0.7rem 0.3rem;
+  border-radius: 3px;
+  box-shadow: inset 2px 2px 4px 0 rgba(34, 0, 0, 0.8);
+  border-radius: 2px;
+}
+
+input {
+  width: 70%;
+  background-color: unset;
+  border: none;
+  outline: none;
+  font-size: 16;
+  font-weight: 500;
+}
+
+select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: unset;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.grade option {
+  background-color: none;
+  border-radius: 5px;
+  padding: 100px;
+}
+
+h3 {
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: inset 2px 2px 4px 0 rgba(34, 0, 0, 0.8);
+  border-radius: 2px;
+}
+
+p,
+span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  .parent {
+    height: 100vh;
+    width: 100vw;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+  }
+  .calc {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  .course,
+  .unit,
+  .grade {
+    width: 80%;
+    font-size: 1.2rem;
+  }
+  .add,
+  .clear {
+    width: 80%;
+    margin-bottom: 0.9rem;
+  }
+  .scores {
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 1.4rem;
+  }
+  input,
+  select {
+    font-size: 1.4rem;
+  }
+
+  .unitScore,
+  .point,
+  .totalPoint {
+    font-size: 2rem;
+  }
+  .buttons {
+    flex-direction: column;
+    margin-right: 5rem;
+  }
+  .details {
+    gap: 2rem;
+  }
+
+  p,
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .courseheader {
+    gap: 2rem;
+  }
+
+  .result {
+    gap: 3rem;
+  }
+
+  .avg,
+  .gpa,
+  .level {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
